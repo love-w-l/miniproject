@@ -1,66 +1,25 @@
-// page/home.js
 Page({
-
-  /**
-   * 页面的初始数据
-   */
-  data: {
-
+  data:({
+    message:'数据动态显示',
+    star:[
+      {name:'kobe',age:20},
+      {name:'why',age:18},
+      {name:'codewhy',age:30},
+      {name:'rubl',age:35}
+    ],
+    count:0
+  }),
+  addclick(){
+    // 类似vue写法并不会在页面上实时更新数据,但是在内部确实改变了数据
+    // this.data.count +=1
+    // console.log(this.data.count)
+    this.setData({
+      count:this.data.count+=1
+    })
   },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
+  subclick(){
+    this.setData({
+      count:this.data.count-=1
+    })
   }
 })

@@ -1,6 +1,15 @@
 <!--page/home.wxml-->
 <text>hello world</text>
-<button size="mini">按钮</button>
 
-<text>知识点2</text>
-<view>哈哈哈</view>
+<!-- 1.动态绑定数据 -->
+<view class="title">{{message}}</view>
+<view>----------------</view>
+
+<!-- 2.wx:for遍历对象与数组 -->
+<view wx:for='{{star}}'>{{item.name}}--{{item.age}}</view>
+<view>----------------</view>
+
+<!-- 事件监听改变data的值 -->
+<view>{{count}}</view>
+<button size="mini" bindtap="addclick">+</button>
+<button size="mini" bindtap="subclick">-</button>

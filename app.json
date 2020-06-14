@@ -1,7 +1,34 @@
 {
   "pages": [
     "page/home/home",
-    "page/about/about"
+    "page/about/about",
+    "page/profile/profile",
+    "page/category/category"
   ],
+  "window": {
+    "navigationBarBackgroundColor": "#FFB6C1",
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "购物街",
+    "backgroundColor": "green",
+    "backgroundTextStyle": "dark",
+    "enablePullDownRefresh": true
+  },
+  "tabBar": {
+    "selectedColor":"#FFB6C1",
+    "list": [
+      {
+      "pagePath": "page/home/home",
+      "text": "首页",
+      "iconPath": "/page/assets/image/home.png",
+      "selectedIconPath": "/page/assets/image/home_active.png"
+    },
+    {
+      "pagePath": "page/category/category",
+      "text": "分类",
+      "iconPath": "/page/assets/image/category.png",
+      "selectedIconPath": "/page/assets/image/category_active.png"
+    }
+  ]
+  },
   "sitemapLocation": "sitemap15.json"
 }
