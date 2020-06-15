@@ -1,0 +1,18 @@
+<!--page/input/input.wxml-->
+<!-- input默认什么边框什么都不显示 必须手动设置样式 -->
+<input></input>
+<!-- 1.value 默认值 -->
+<input value="hello"></input>
+<!-- 2.type 设置当点击弹出的输入法显示的是数字,文本输入法 -->
+<!-- text 文本输入键盘 number数字输入键盘 idcard身份证输入键盘 digit带小数点的数字键盘-->
+<input type="idcard"></input>
+<!-- 3.passworld摩玛输入框 -->
+<input password></input>
+<!-- 4.占位符输入框  placeholder-->
+<input placeholder='请输入内容'></input>
+<!-- 5.键盘的事件 bindinput bindfocus bindblur -->
+<input bindinput="bindinput"
+       bindfocus="bindfocus"
+       bindblur="bindblur">
+</input>
+<view>{{message}}</view>

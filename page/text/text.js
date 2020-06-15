@@ -1,4 +1,4 @@
-// page/profile/profile.js
+// page/text/text.js
 Page({
 
   /**

@@ -1,6 +1,12 @@
 {
   "pages":[
     "page/home/home",
-    "page/about/about"
+    "page/category/category",
+    "page/text/text",
+    "page/button/button",
+    "page/view/view",
+    "page/image/image",
+    "page/input/input",
+    "page/scroll/scroll"
   ]
 }

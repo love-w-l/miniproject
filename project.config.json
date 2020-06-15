@@ -48,7 +48,43 @@
 		},
 		"miniprogram": {
 			"current": -1,
-			"list": []
+			"list": [
+				{
+					"id": 0,
+					"name": "button",
+					"pathName": "page/button/button",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "view",
+					"pathName": "page/view/view",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "image",
+					"pathName": "page/image/image",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "input",
+					"pathName": "page/input/input",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "scroll",
+					"pathName": "page/scroll/scroll",
+					"query": "",
+					"scene": null
+				}
+			]
 		}
 	}
 }

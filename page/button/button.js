@@ -1,11 +1,10 @@
-// page/about/about.js
+// page/button/button.js
 Page({
-
   /**
    * 页面的初始数据
    */
   data: {
-
+    loading:false
   },
 
   /**

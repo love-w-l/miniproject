@@ -1,0 +1,16 @@
+<!--page/button/button.wxml-->
+<!-- 1.size 只有迷你一个值-->
+<button>按钮</button>
+<button size="mini">按钮</button>
+<!-- 2.type可以设置按钮的颜色 -->
+<button size="mini" type="primary">按钮</button>
+<button size="mini" type="defaut">按钮</button>
+<button size="mini" type="warn">按钮</button>
+<!-- 3.plain镂空效果 背景透明色 -->
+<button size="mini" plain>按钮</button>
+<!-- 4.disable禁用效果 -->
+<button size="mini" disabled>按钮</button>
+<!-- 5.loading 等待图标 可以配合网络请求使用,当请求成功时在将变量变为false-->
+<button size="mini" loading='{{loading}}'>按钮</button>
+<!-- 6.hover-calss当点击按钮时自行设置一个样式 -->
+<button hover-class='hover'>按钮</button>

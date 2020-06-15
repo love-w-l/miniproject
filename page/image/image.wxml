@@ -1,0 +1,23 @@
+<!-- 1.image不引入图片,只写一个标签也是会占据300*240大小的地方 -->
+<!-- <image/> -->
+<!-- 2.引入本地图片的两种格式(相对路径,绝对路径) mode图片裁剪和自适应的调整-->
+<!-- 相对路径 -->
+<image src="../assets/image/u=1640961606,225602584&fm=26&gp=0.jpg"></image>
+<!-- 绝对路径 -->
+<image mode="widthFix" src="/page/assets/image/2e907ff69b.jpg"></image>
+<!-- 网上图片路径 -->
+<image src="https://res.wx.qq.com/wxdoc/dist/assets/img/0.4cb08bb4.jpg"></image>
+
+<!-- 3.用户自己从相册选择一张或拍照展示 -->
+<image src="{{image}}"></image>
+<button size="mini" bindtap="bindtap">选择一张图片</button>
+<view>-----------------</view>
+<!-- 4.长按图片显示弹窗 -->
+<image mode="bottom right" show-menu-by-longpress src="/page/assets/image/2e907ff69b.jpg"></image>
+
+<!-- 5.lazy-load进行图片懒加载 bindload当图片加载完成时加载-->
+<image wx:for="{{10}}" 
+       lazy-load
+       bindload="bindload" 
+       src="https://res.wx.qq.com/wxdoc/dist/assets/img/0.4cb08bb4.jpg">
+</image>

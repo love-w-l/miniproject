@@ -1,0 +1,17 @@
+<!--page/view/view.wxml-->
+<!-- 1.view是块级元素,相当于html中的div -->
+<view class="view">hello world</view>
+
+<!--  2.也可以像button一样,设置当点击显示对应的样式-->
+<view hover-class="hover">hello codewhy</view>
+
+<!-- 3.也可以设置点击多长时间显示,多长时间显示点击效果 -->
+<view hover-class="hover" hover-start-time="100" hover-stay-time="1000">hello wrold</view>
+
+<!-- 4.阻止冒泡事件 设置hover-stop-propagation就不会冒泡到父元素-->
+<view class="father" hover-class="father-hover">
+hello
+  <view class="son" hover-class="son-hover" hover-stop-propagation>
+  world
+  </view>
+</view>

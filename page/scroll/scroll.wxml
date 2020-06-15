@@ -1,0 +1,14 @@
+<!--page/scroll/scroll.wxml-->
+<scroll-view scroll-x class="scroll-x">
+  <view wx:for='{{10}}' class="item-x">{{item}}</view>
+</scroll-view>
+
+<scroll-view scroll-y 
+             refresher-enabled='true' 
+             class="scroll-y scroll-top='{{scrollTop}}'"
+             refresher-background='#FFF' bindrefresherpulling='bindrefresherpulling'
+             bindscroll='bindscroll'>
+  <view wx:for='{{10}}' 
+             class="item-y">
+             {{item}}</view>
+</scroll-view>

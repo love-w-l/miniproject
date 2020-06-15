@@ -1,0 +1,21 @@
+<!--page/text/text.wxml-->
+<!-- 1.text默认是在一行显示的 -->
+<text>hello</text>
+<text>world\n</text>
+<!-- 2.在后面加上\n独占一行 -->
+<text>hello\n</text>
+<text>world\n</text>
+
+<!-- 3.selectable默认文本是不可选中状态(长按) 可以设置为true 必须使用mustache语法写,否则会当成字符串解析-->
+<text selectable="{{true}}">hello codewhy\n</text>
+<!-- 后面不跟true默认也是true -->
+<text selectable>hello codewhy\n</text>
+
+<!-- 4.space 显示空格长度 -->
+<text>hello world\n</text>
+<!-- nbsp跟默认空格一样大 -->
+<text space="nbsp">hello world\n</text>
+<!-- ensp中文字符空格一半大小 -->
+<text space="ensp">hello world\n</text>
+<!-- emsp中文字符空格大小 -->
+<text space="emsp">hello world\n</text>
