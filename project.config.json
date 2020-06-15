@@ -60,8 +60,9 @@
 			"list": [
 				{
 					"id": -1,
-					"name": "pages/index/index",
-					"pathName": "pages/index/index",
+					"name": "分类页面",
+					"pathName": "page/category/category",
+					"query": "",
 					"scene": null
 				}
 			]
