@@ -1,1 +1,13 @@
 /* page/category/category.wxss */
+.userAvatarUrl1{
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  transform: translate(150%);
+  display: block;
+}
+.userNickName{
+  font-size: 18px;
+  display: block;
+  text-align: center;
+}

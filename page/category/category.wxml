@@ -1,2 +1,15 @@
 <!--page/category/category.wxml-->
-<text>page/category/category.wxml</text>
+<text>hello category</text>
+<view bindtap="click">{{message}}</view>
+
+<!-- 当getuserinfo方法废除之后,只能使用这两种办法让用户自己点击获取 -->
+<!-- 2.获取用户信息 当用户点击按钮时,触发一个事件,进行获取-->
+<button size="mini" open-type="getUserInfo" bindgetuserinfo="getuserinfo">获取权限</button>
+
+<!-- 3.展示用户信息 -->
+<open-data type='userAvatarUrl' class='userAvatarUrl1'></open-data>
+<open-data type='userNickName' class='userNickName'></open-data>
+
+<view wx:for='{{list}}'>
+ <text wx:for='{{item.title}}'>{{item}}</text>
+</view>
