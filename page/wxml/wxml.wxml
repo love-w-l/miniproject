@@ -1,0 +1,46 @@
+<!--page/wxml/wxml.wxml-->
+<!-- 1.wxml的格式 严格区分大小写,单标签必须有闭合标签-->
+<!-- <image/>
+<input/>
+<view class="" Class=""></view> -->
+
+<!-- 2.mustache语法 -->
+<view>{{message}}</view>
+<view>{{firstname}} {{lastname}}</view>
+<view>{{firstname+" "+lastname}}</view>
+<view>{{age>20 ? '成年人': '未成年人'}}</view>
+<view>{{nowtime}}</view>
+<button bindtap="bindtap" size="mini">改变状态</button>
+<view class="box {{isActive ? 'active' : ''}}">哈哈哈</view>
+
+<view style="text-align: center;">----条件判断-->wx:if-->elif-->else-->hidden-----</view>
+<!-- 3.条件判断 -->
+<!-- wx:if wx:elif wx:else 惰性加载 如果在渲染之前的值是false,则什么也不会做,只有当为true是才开始渲染,组件隐藏/显示的频率比较低时使用-->
+<button bindtap="incrment">成绩+10</button>
+<view wx:if='{{score>=90}}'>优秀</view>
+<view wx:elif='{{score>=60}}'>及格</view>
+<view wx:else>不及格</view>
+<!-- hidden 组件始终会被渲染,隐藏的时候并不会真正的被销毁 组件隐藏/显示的频率比较高时使用-->
+<view wx:if='{{isshow}}'>wx:if控制</view>
+<view hidden="{{isshow}}">hidden控制</view>
+
+<view style="text-align: center;">-------列表渲染-->wx:for-->wx:key-->block------</view> 
+<!-- <block></block>标签并不会渲染,只是为语句提供了一个语义化标签 -->
+<block wx:for='{{movies}}' wx:for-item='name' wx:for-index='index1' wx:key='index1'>
+  <view wx:for='{{name}}'>{{index1}}--{{item}}</view>
+</block>
+<view style="text-align: center;">---模板与引用-->template-->include-->import---</view>
+<!-- 用template声明一个模板,并不会在页面上渲染,只有调用时才会进行渲染 name来指定特定的模板 -->
+<!-- <template name="msgitem">
+  <button size="mini">{{btn}}</button>
+  <view>{{msgitem}}</view>
+</template> -->
+<!-- 使用is来指定显示哪个模板和data显示什么样的数据 -->
+<!-- <template is="msgitem" data="{{btn:'按钮',msgitem:'hello'}}"></template> -->
+<!-- import 主要引入指定文件内的模板,但不会引入指定模板内引用的其他模板,但是可以在指定的文件内定义多个模板使用 -->
+<import src='/page/template/template.wxml'/>
+<template is="msgitem" data="{{btn:'按钮',msgitem:'hello'}}"></template>
+<template is="msg" data="{{btn2:'按钮2'}}"></template>
+<!-- include 可以将除了template和 wxs外的代码引入 可以引入指定文件内引入的其他文件 -->
+<include src='../include/nav.wxml'/>
+<include src='../include/bottom.wxml'/>

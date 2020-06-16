@@ -1,0 +1,8 @@
+<template name="msgitem">
+  <button size="mini">{{btn}}</button>
+  <view>{{msgitem}}</view>
+</template>
+
+<template name="msg">
+  <button size="mini">{{btn2}}</button>
+</template>

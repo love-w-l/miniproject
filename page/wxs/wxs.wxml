@@ -1,0 +1,38 @@
+<!--page/wxs/wxs.wxml-->
+<!-- 1.认识wxs的作用 随意些数字进行处理,.js中的函数不能进行处理,就需要wxs -->
+<!-- 在wxml中不能直接定义Page内定义的函数,也不能像vue中进行过滤 -->
+
+<!-- 错误的写法 
+  <view>{{25.6666.toFixed(2)}}</view>
+   <view>{{toFixed(25.6666)}}</view> //不可以直接调用page页面中定义的函数
+ -->
+
+ <!-- 2.wxs的两种写法 只支持js5 -->
+ <!-- 第一种写法,在内部直接书写 -->
+ <!-- <wxs module='info'>
+  var message = 'hello world'
+  var foo = function(num1,num2){
+    return num1+num2
+  }
+  var toFixed = function(num,number){
+    var number = number || 2
+    var _num = parseFloat(num)
+    return _num.toFixed(number)
+  }
+  module.exports={
+    message:message,
+    foo:foo,
+    toFixed:toFixed
+  }
+ </wxs> -->
+ <!-- 第二种写法,引用外部的.wxs文件 必须使用相对路径,如果应用的文件中也引用了其他文件,可以使用require-->
+ <wxs src='./wxs/info.wxs' module='info'/>
+ <view>{{info.message}}</view>
+ <view>{{info.foo(1,2)}}</view>
+ <view>{{info.toFixed(23.23478,1)}}</view>
+
+ <!-- 3.wxs的应用 1560598160将时间戳装换为时间-->
+ <wxs src='./wxs/format.wxs' module='format'/>
+ <view>{{format.format(price,4)}}</view>
+ <view>{{format.time(time)}}</view>
+

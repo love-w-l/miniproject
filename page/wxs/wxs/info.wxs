@@ -1,0 +1,14 @@
+var message = 'hello world'
+var foo = function(num1,num2){
+  return num1+num2
+}
+var toFixed = function(num,number){
+  var number = number || 2
+  var _num = parseFloat(num)
+  return _num.toFixed(number)
+}
+module.exports={
+  message:message,
+  foo:foo,
+  toFixed:toFixed
+}

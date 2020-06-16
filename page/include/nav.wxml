@@ -1,0 +1,4 @@
+<view>
+  <include src='./search.wxml'/>
+  <view>导航</view>
+</view>

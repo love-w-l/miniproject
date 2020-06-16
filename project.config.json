@@ -53,6 +53,20 @@
 					"id": -1,
 					"name": "pages/index/index",
 					"pathName": "pages/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "wxml",
+					"pathName": "page/wxml/wxml",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "wxs",
+					"pathName": "page/wxs/wxs",
 					"scene": null
 				}
 			]
