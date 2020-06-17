@@ -1,3 +1,40 @@
 <!--page/home.wxml-->
-<text>hello world</text>
-<button size="mini">按钮</button>
+<!-- 1.事件处理的函数 -->
+<button size="mini" bindtap="btnclick">按钮</button>
+<button size="mini" bind:tap="btnclick">按钮</button>
+<!-- catch不会发生事件冒泡 -->
+<button size="mini" catchtap="catchclick">按钮</button>
+
+<!-- 2.常见的一些事件 -->
+<view class="box"
+      bindtouchend="handletouchend"
+      bindtouchstart="handletouchstart"
+      bindtouchmove="handletouchmove"
+      bindlongpress="handlelongpress">
+</view>
+
+<!-- 3.事件对象的分析 -->
+<!-- type 当前发生事件的类型
+     detail:当前相对于视口的坐标值
+     timeStamp:从页面打开到发生事件之间的间隔时间
+     currentTarget:当前发生事件的元素(在冒泡事件中,显示的被点击外层的元素,即冒泡到最外层的哪一个元素,触发事件的元素)
+     target:当前发生事件的元素(在冒泡事件中,显示的被点击的元素,只要不发生冒泡事件,与current显示的是同一个元素,产生事件的元素)
+     touches:用来记录当前有几个手指在小程序中发生触摸 以及对应点的信息
+     changedTouches:用来记录变化的
+     拿touchend事件对比touches与changedtouches:当点击按钮离开时,touches中的数组个数为0,因为当前点击按钮的手指已经离开
+     但是changedtouches的数组个数为1,因为发生了一次变化,即点击
+ -->
+<button size="mini" id="btn" bind:tap='handleclick' bindtouchend="handleend">事件对象的分析</button>
+<!-- 4.事件参数的传递 -->
+<view class="container">
+<block wx:for='{{titles}}' wx:key='index'>
+  <view class="item" bindtap="titleclick" data-item="{{item}}" data-index="{{index}}">{{item}}</view>
+</block>
+</view>
+<!-- 5.事件的捕获与冒泡 可以用catch事件阻止对应的冒泡或捕获-->
+<view class="outer" capture-bind:tap='outercapture' bindtap="outertap">
+  <view class="center" capture-bind:tap='centercapture' bindtap="centertap"> 
+    <view class="inner" capture-bind:tap='innercapture' bindtap="innertap">
+    </view>
+  </view>
+</view>

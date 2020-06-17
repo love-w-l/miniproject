@@ -1,66 +1,54 @@
 // page/home.js
 Page({
 
-  /**
-   * 页面的初始数据
-   */
   data: {
-
+    titles:['衣服','裤子','鞋子']
   },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-
+  btnclick(){
+    console.log('按钮被点击了')
   },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
+  catchclick(){
+    console.log('阻止事件冒泡按钮被点击了')
   },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
+  handletouchstart(){
+    console.log('手指开始触摸')
   },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
+  handletouchend(){
+    console.log('手指离开屏幕')
   },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
+  handletouchmove(){
+    console.log('手指在屏幕上移动')
   },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
+  handlelongpress(){
+    console.log('手指长按屏幕')
   },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
+  handleclick(event){
+    console.log(event , '------')
   },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
+  handleend(event){
+    console.log(event , '+++++')
+  },
+  titleclick(event){
+    console.log(event)
+    console.log(event.target.dataset.index)
+    console.log(event.target.dataset.item)
+  },
+  outercapture(){
+    console.log('taptureouter')
+  },
+  centercapture(){
+    console.log('tapturecenter')
+  },
+  innercapture(){
+    console.log('taptureinner')
+  },
+  outertap(){
+    console.log('outertap')
+  },
+  centertap(){
+    console.log('centertap')
+  },
+  innertap(){
+    console.log('innertap')
   }
 })
