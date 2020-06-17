@@ -1,0 +1,10 @@
+/* Compontent/my-props/my-props.wxss */
+.title{
+  font-size: 20px;
+  background: yellow;
+}
+.container{
+  font-size: 23px;
+  background: orange;
+  margin-top: 10px;
+}

@@ -1,0 +1,8 @@
+<!--Compontent/my-mslot/my-mslot.wxml-->
+<view>
+<text>我是具名插槽的头部</text>
+  <slot name='slot1'/>
+  <slot name='slot2'/>
+  <slot name='slot3'/>
+<view>我是具名插槽的尾部</view>
+</view>

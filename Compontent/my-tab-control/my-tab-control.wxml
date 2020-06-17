@@ -1,0 +1,14 @@
+<!--Compontent/my-tab-control/my-tab-control.wxml-->
+<view class="tabcontrol">
+  <!-- <view class="tab-item">鞋子</view>
+  <view class="tab-item">裤子</view>
+  <view class="tab-item">上衣</view> -->
+  <view wx:for='{{titles}}' 
+        wx:key='index' 
+        class="tab-item {{isactive == index?'active':''}}" 
+        bind:tap="tapitem" 
+        data-index="{{index}}"
+        data-item="{{item}}">
+        <text class="text">{{item}}</text>
+  </view>
+</view>

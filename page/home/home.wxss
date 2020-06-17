@@ -1,1 +1,18 @@
 /* page/home.wxss */
+.title{
+  font-size: 18px;
+  background: yellow;
+  margin-top: 10px;
+}
+.red{
+  margin-top: 10px;
+  color: red;
+}
+.yellow{
+  color: orange;
+  margin-top: 10px;
+}
+.green{
+  color: green;
+  margin-top: 10px;
+}

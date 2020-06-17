@@ -1,0 +1,3 @@
+<!--Compontent/my-props/my-props.wxml-->
+<view class="title titleclass">{{titles}}</view>
+<view class="container">hello world</view>

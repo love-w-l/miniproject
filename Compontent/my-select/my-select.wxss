@@ -1,0 +1,5 @@
+/* Compontent/my-select/my-select.wxss */
+.count{
+  font-size: 40rpx;
+  text-align: center;
+}

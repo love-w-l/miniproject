@@ -1,5 +1,15 @@
 {
   "pages": [
     
-  ]
+  ],
+  "usingComponents": {
+    "my-cpn":"/Compontent/my-cpm/my-cpn",
+    "my-props":"/Compontent/my-props/my-props",
+    "my-event":"/Compontent/my-event/my-event",
+    "my-tab-control":"/Compontent/my-tab-control/my-tab-control",
+    "my-select":"/Compontent/my-select/my-select",
+    "my-slot":"/Compontent/my-slot/my-slot",
+    "my-mslot":"/Compontent/my-mslot/my-mslot",
+    "my-components":"/Compontent/my-components/my-components"
+  }
 }

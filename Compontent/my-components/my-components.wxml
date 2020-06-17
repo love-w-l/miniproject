@@ -1,0 +1,6 @@
+<!--Compontent/my-components/my-components.wxml-->
+<view>
+  <slot name='c-slot1'/>
+  <slot name='c-slot2'/>
+  <slot name='c-slot3'/>
+</view>

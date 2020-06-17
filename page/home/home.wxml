@@ -1,3 +1,70 @@
 <!--page/home.wxml-->
 <text>hello world</text>
 <button size="mini">按钮</button>
+
+<!-- 1.要想使用自定义组件必须在json文件中进行注册,如果多个页面同时使用一个自定义组件,可以在全局app.json中注册,这样在每个页面中都可以使用 -->
+<my-cpn></my-cpn>
+<!-- 2.在组件中只能使用class定义样式,并且和引用的页面样式不起冲突 -->
+<!-- 自定义组件内不能使用id,标签,属性选择器,会有警报 -->
+<!-- 默认情况下组件与页面内的样式不会相互影响,如果想要样式共享
+     可以在自定义组件.js文件中,添加options属性:
+                            styleIsloation:"apply-shared" 页面的样式对组件产生影响
+                            styleIsloation:"shared"  页面和自定义样式相互影响
+ -->
+<my-cpn></my-cpn>  
+
+<!-- 3.组件传递数据/样式 -->
+<my-props titles='哈哈哈' titleclass="red"></my-props>
+<my-props titles="呵呵呵" titleclass="yellow"></my-props>
+<my-props titles="嘻嘻嘻" titleclass="green"></my-props>
+
+<!-- 4.自定义事件传递数据 -->
+<view>{{count}}</view>
+<my-event bind:increment="increment"/>
+
+<!-- 5.自定义组件 -->
+<my-tab-control titles='{{titles}}' bind:tapitem='tapitem'/>
+
+<!-- 6.select修改子组件的内容 -->
+<my-select id="container"/>
+<button size="mini" 
+        style="text-align: center;display:block;width:400rpx"
+        bindtap="itemclick">
+        修改子组件的数据
+</button>
+
+<!-- 7.单个插槽的使用 -->
+<my-slot>
+  <button size="mini">插槽出入的按钮</button>
+</my-slot>
+<my-slot>
+  <image mode="aspectFit" src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1973905751,159815303&fm=26&gp=0.jpg"/>
+</my-slot>
+<!-- 8.多个插槽的使用 -->
+<!-- 
+  注意事项：
+          1.给每一个插槽起一个名字:name属性
+          2.必须在Components对象中添加一个属性:options
+ -->
+<my-mslot>
+  <image slot='slot2' mode="aspectFit" src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=2541971769,302482213&fm=26&gp=0.jpg"></image>
+  <image slot='slot1' mode="aspectFit" src="https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=1558994602,1605433454&fm=26&gp=0.jpg"></image>
+</my-mslot>
+<!-- 9.Components构造器参数解析 -->
+<!-- 
+  properties 定义外部传过来的数据
+  data:定义自己的数据
+  methods:定义自己的一些事件函数
+  options:定义组件的配置选项 比如:multipleSlots(支持多插槽),styleIsolation(组件与页面的样式隔离方式)
+  externalClasses:外部给组件传过来的样式
+  observers:监听properties/data的数据改变
+  pageLifetimes:页面声明周期
+  lefttimes:组件的声明周期
+-->
+<button size="mini" bindtap="isshow">控制组件显示隐藏</button>
+<view wx:if='{{isshow}}'>
+<my-components>
+  <image slot='c-slot1' mode="aspectFit" src="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=1077760510,170205345&fm=26&gp=0.jpg"></image>
+  <image slot='c-slot2' mode="aspectFit" src="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=2808876769,630213930&fm=26&gp=0.jpg"></image>
+</my-components>
+</view>

@@ -1,0 +1,5 @@
+/* Compontent/my-cpm/my-cpn.wxss */
+.container{
+  background: red;
+  color: white;
+}

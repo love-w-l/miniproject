@@ -1,0 +1,2 @@
+<!--Compontent/my-select/my-select.wxml-->
+<view class="count">{{count}}</view>
