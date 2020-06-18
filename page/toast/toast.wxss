@@ -1,0 +1,10 @@
+/* page/toast/toast.wxss */
+image{
+  width: 100px;
+  height: 100px;
+  transform: translate(90%);
+}
+image2{
+  width: 300px;
+  display: block;
+}

@@ -1,0 +1,15 @@
+<!--page/toast/toast.wxml-->
+<button size="mini" bindtap="showtoast">弹窗</button>
+<button size="mini" bindtap="showloading">等待</button>
+<button size="mini" bindtap="showModal">模态对话框</button>
+<!-- 自定义模态弹窗,加图片 -->
+<button bindtap="buttonmodal" type="primary" size="mini">自定义模态弹窗</button>
+<modal title='我是标题' bindconfirm='modalconfirm' bindcancel="modalcancel" hidden="{{modalhidden}}">
+  <image class="image" src="/assets/image/成功.svg"></image>
+</modal>
+<!-- 底部弹窗 -->
+<view>
+<button bindtap="showaction" size="mini">底部弹窗</button>
+</view>
+<image class="image2" mode="heightFix" src="{{chooseimage}}"></image>
+<button open-type="share">分享按钮</button>
