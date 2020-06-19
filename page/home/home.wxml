@@ -1,3 +1,26 @@
 <!--page/home.wxml-->
 <text>hello world</text>
 <button size="mini">按钮</button>
+<!-- 1.navigator页面跳转,首页的页面并不会销毁,而是被覆盖了 -->
+<navigator open-type="navigate" url="/page/navigator/navigator">跳转详情页</navigator>
+
+<!-- 2.跳转页面重定向,之前的首页页面销毁 -->
+<navigator open-type="redirect" url="/page/navigator/navigator">跳转到详情页</navigator>
+
+<!-- 3.switch导航跳转 tabbar跳转-->
+<navigator open-type="switchTab" url='/page/about/about'>跳转到关于页面</navigator>
+
+<!-- 4.跳转将之前打开的所有页面都关闭 -->
+<navigator open-type="reLaunch" url="/page/about/about">跳转到关于</navigator>
+
+<navigator open-type="navigate" url="/page/comment/comment">跳转到评论页面</navigator>
+
+<!-- 5.跳转传递数据 -->
+<navigator open-type="navigate" url="/page/detail/detail?name='kobe'&age=13">跳转到详情页面并传递数据</navigator>
+
+<view>{{title}}</view>
+<!-- 6.通过代码进行页面跳转 -->
+<button size="mini" bindtap="handelgo">跳转到详情页面</button>
+
+<button size="mini" bindtap="handleredirect">跳转到评论页面</button>
+<image src='/assets/image/child.svg' bindtap="navigate1"></image>
